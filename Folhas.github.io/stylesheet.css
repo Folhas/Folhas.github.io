@@ -1,0 +1,51 @@
+/* Eu desprezo CSS. */
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;     
+    background: radial-gradient(#18221a, #04100d)
+}
+#buttonToSpeak {
+    background: var(--container-background);
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid transparent;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    background-color: papayawhip;
+    display: flex;
+    justify-content: center;
+}
+#buttonToSpeak:hover {
+    box-shadow: 0 8px 24px rgba(papayawhip, 0.3);
+    background-color: #f0e6d2;
+}
+.destroymanIIIContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 40%;
+}
+.speechBubble {
+    position: relative;
+    background: #fff;
+    color: #222;
+    border-radius: 12px;
+    padding: 16px 24px;
+    max-width: 320px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    font-size: 1em;
+    margin: 24px;
+    left: 20%;
+    top: 200px;
+}
+#buttonToSpeakContainer {
+    display: flex;
+    justify-content: center;
+}
