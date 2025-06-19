@@ -113,7 +113,7 @@ function mouthAnim() {
                 else {
                     document.getElementById("destroymanIII").src = "./images/destroymanIII.png";
                 }
-            }, 500);
+            }, i * 500);
         }
         isOnCooldown = true;
         setTimeout(function() {
