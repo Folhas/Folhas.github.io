@@ -181,6 +181,7 @@ footer p {
     color: #dddddd;
     height: 50px;
     width: 50px;
+    cursor: pointer;
 }
 #forwardGallery {
     right: 30%;
