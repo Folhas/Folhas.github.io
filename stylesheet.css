@@ -162,6 +162,51 @@ footer p {
 .fade-in.visible {
     opacity: 1;
 }
+#gallery {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    background: radial-gradient(#2f302f, #080808);
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    width: 62.8%;
+}
+.galleryButton {
+    position: absolute;
+    border-radius: 1000px;
+    background-color: #333;
+    opacity: 0.3;
+    color: #dddddd;
+    height: 50px;
+    width: 50px;
+}
+#forwardGallery {
+    right: 30%;
+}
+#backwardGallery {
+    left: 30%;
+}
+#imgInGallery {
+    height: 300px;
+    margin: 20px;
+}
+#galeriaTituloContainer{
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    background-color: papayawhip;
+    width: 400px;
+}
+#galeriaTitulo {
+    justify-self: center;
+    font-size: 60px;
+}
+
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1}

@@ -99,7 +99,7 @@ function speak() {
 
         let randomIndex = Math.floor(Math.random() * dialogue.length);
         let randomItem = dialogue[randomIndex];
-        document.querySelector(".speechBubbleText").textContent = randomItem;  
+        document.querySelector(".speechBubbleText").textContent = randomItem;
     }
 }
 
@@ -113,7 +113,7 @@ function mouthAnim() {
                 else {
                     document.getElementById("destroymanIII").src = "./images/destroymanIII.png";
                 }
-            }, i * 500);
+            }, 500);
         }
         isOnCooldown = true;
         setTimeout(function() {
@@ -122,10 +122,40 @@ function mouthAnim() {
     }
 }
 
+let currentImg = 0
+const galleryImages = {
+    0: "./images/destroymanIIIChest.webp",
+    1: "./images/destroymanIII.png",
+    2: "./images/destroymanIIIPlush.webp",
+    3: "./images/destroymanIIIPlushAd.webp",
+}
+
+function nextImg() {
+    if (currentImg === 3) {
+        currentImg = 0
+    }
+    else {
+        currentImg++
+    }
+    document.getElementById("imgInGallery").src = galleryImages[currentImg]
+
+}
+
+function previousImg() {
+    if (currentImg === 0) {
+        currentImg = 3
+    }
+    else {
+        currentImg--
+    }
+    document.getElementById("imgInGallery").src = galleryImages[currentImg]
+
+}
+
 window.addEventListener('scroll', function() {
     const el = document.getElementById('destroymanIIIChest');
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
+    if (rect.top < window.innerHeight) {
         el.classList.add('visible');
     }
 });
@@ -133,7 +163,7 @@ window.addEventListener('scroll', function() {
     const elements = document.querySelectorAll('.fade-in');
     elements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
+        if (rect.top < window.innerHeight) {
             el.classList.add('visible');
         }
     });
