@@ -1,0 +1,138 @@
+/* Eu desprezo CSS. */
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    font-family: "Segoe UI";
+    margin: 0;
+    padding: 0;     
+    background: radial-gradient(#18221a, #04100d)
+}
+#buttonToSpeak {
+    background: var(--container-background);
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid transparent;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    background-color: papayawhip;
+    display: flex;
+    justify-content: center;
+}
+#buttonToSpeak:hover {
+    box-shadow: 0 8px 24px rgba(papayawhip, 0.3);
+    background-color: #f0e6d2;
+    cursor: pointer;
+}
+#destroymanIII {
+    animation: fadeIn 5s ease-in;
+}
+.destroymanIIIContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    left: 40%;
+}
+.speechBubble {
+    position: absolute;
+    background: papayawhip;
+    color: #222;
+    border-radius: 12px;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    padding: 16px 24px;
+    max-width: 320px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    font-size: 1em;
+    margin: 24px;
+    left: 20%;
+    top: 270px;
+}
+#buttonToSpeakContainer {
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    color: black;
+    font-size: 80px;
+    font-family: "Brush Script MT";
+    text-align: center;
+    animation: fadeIn 4s ease-in;
+}
+h2 {
+    color: black;
+    font-family: "Times New Roman";
+    margin: 20px;
+}
+#h1Container {
+    position: relative;
+    background: papayawhip;
+    width: 37%;
+    left: 31.5%;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 30px;
+    border-image-outset: 2px;
+    animation: fadeIn 2s ease-in;
+}
+p, li {
+    color: black;
+    font-family: "Times New Roman";
+    margin: 20px;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: #333333
+}
+.pContainer {
+    display: inline-block;
+    background: papayawhip;
+    margin: 48px;
+    width: 37%;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    vertical-align: top;
+}
+#pContainerUltimo {
+    position: relative;
+    bottom: 328px;
+}
+.pContainerContainer {
+    position: relative;
+    background: radial-gradient(#2f302f, #080808);
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 2px;
+    left: 20%;
+    padding: 20px 0px 20px 52px;
+    height: 880px;
+    width: 60%;
+}
+#destroymanIIIChest {
+    position: relative;
+    border-image: url(https://deepwoken.co/border.png) 45%;
+    border-image-width: 15px;
+    border-image-outset: 4px;
+    margin: 20px 0px 20px 0px;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+}
+#footer {
+    position: relative;
+    bottom: -220px;
+    background-color: #080808;
+    width: 100%;
+    height: 500px
+}
+
+@keyframes fadeIn {
+    from {opacity: 0}
+    to {opacity: 1}
+}
