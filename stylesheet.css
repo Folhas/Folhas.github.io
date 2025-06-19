@@ -131,7 +131,37 @@ a:hover {
     width: 100%;
     height: 500px
 }
-
+#linksExternosContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 70%;
+}
+.wikiLogo {
+    height: 50px;
+    width: 50px;
+    margin: 0px 10px 0px 0px
+}
+#wikiLink, #vilaoLink{
+    margin: 20px;
+    text-align: center;
+}
+#wikiLink:link, #vilaoLink:link, #wikiLink:visited, #vilaoLink:visited {
+    color: papayawhip;
+}
+#wikiLink:hover, #vilaoLink:hover {
+    color: #ecdcbb;
+}
+footer p {
+    color: papayawhip;
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.7s;
+}
+.fade-in.visible {
+    opacity: 1;
+}
 @keyframes fadeIn {
     from {opacity: 0}
     to {opacity: 1}
