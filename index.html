@@ -5,26 +5,25 @@
     <title>Destroyman III Simulator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="FolhasCampos">
-    <meta name="description" content="Um tributo à maior e mais reconhecida lendária doença de toda Lumen">
+    <meta name="description" content="Um simulador do mais reconhecível sintoma da Febre Coral, junto de outras informações úteis.">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="icon" href="./images/destroymanIII.png" type="image/x-icon">
 </head>
 <body>
+
     <header><div id="h1Container"><h1> Destroyman the Third </h1></div></header>
 
     <main>
-    <div id="speechBubbleContainer"></div>
 
-    <template id="speechBubbleTemplate">
         <div class="speechBubble">
             <strong><div class="speechBubbleText"></div></strong>
         </div>
-    </template>
+
     <div class="destroymanIIIContainer">
         <img src="./images/destroymanIII.png" id="destroymanIII">
     </div> <br>
     
-    <div id="buttonToSpeakContainer"><button id="buttonToSpeak" onclick="speak(); mouthAnim()">Be granted infinite wisdom.</button></div> <br>
+    <div id="buttonToSpeakContainer"><button id="buttonToSpeak" onclick="speak(); mouthAnim(); playSound('./sounds/DESTROYMAN_III_CURSED_SPEECH.mp3.mpeg')">Be granted infinite wisdom.</button></div> <br>
     </main>
 
     <figure><img src="./images/destroymanIIIChest.webp" class="fade-in"id="destroymanIIIChest"></figure>

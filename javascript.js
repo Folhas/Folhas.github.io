@@ -1,8 +1,16 @@
 let isOnCooldown = false
 let siteStartUp = true;
-        setTimeout(function() {
-            siteStartUp = false;
-        }, 3800);
+setTimeout(function() {
+    siteStartUp = false;
+}, 3800);
+
+//preparation stuff
+document.getElementById('buttonToSpeak').style.cursor = 'default'
+const audio = new Audio('./sounds/DESTROYMAN_III_CURSED_SPEECH.mp3.mpeg')
+    audio.load()
+    setInterval(function () {
+        audio.load()
+    }, 10000)
 
 function speak() {
     const dialogue = [
@@ -93,19 +101,24 @@ function speak() {
 "You wouldn't ever eat poison, right? So why would you eat at a restaurant chain?",
 "You, uh.. you doin' good? I'm not asking because I care, I'm asking because I was coded to."
     ]
-    if (siteStartUp === false) {
-        document.getElementById("speechBubbleContainer").innerHTML = "";
-        document.getElementById("speechBubbleContainer").appendChild(document.getElementById("speechBubbleTemplate").content.cloneNode(true));
-
+    if (isOnCooldown == false && siteStartUp === false) {
+        document.querySelector('.speechBubble').style.display = 'flex';
         let randomIndex = Math.floor(Math.random() * dialogue.length);
         let randomItem = dialogue[randomIndex];
         document.querySelector(".speechBubbleText").textContent = randomItem;
+        document.getElementById('buttonToSpeak').style.backgroundColor = 'rgb(119, 112, 100)'
+        document.getElementById('buttonToSpeak').style.cursor = 'default'
+        setTimeout(function(){
+            document.querySelector('.speechBubble').style.display = 'none';
+            document.getElementById('buttonToSpeak').style.backgroundColor = 'papayawhip'
+            document.getElementById('buttonToSpeak').style.cursor = 'pointer'
+        }, 5000)
     }
 }
 
 function mouthAnim() {
     if (isOnCooldown === false && siteStartUp === false) {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 10; i++) {
             setTimeout(function() {
                 if (document.getElementById("destroymanIII").src.includes("destroymanIII.png")) {
                     document.getElementById("destroymanIII").src = "./images/destroymanIII_OpenMouth.png";
@@ -115,10 +128,31 @@ function mouthAnim() {
                 }
             }, i * 500);
         }
-        isOnCooldown = true;
+    }
+}
+
+setTimeout(function() {
+    mouthAnim()
+    document.querySelector('.speechBubble').style.display = 'flex'
+    document.querySelector('.speechBubbleText').textContent = "Thank you for contracting [ CORAL FEVER ]! I'm your new personal assistant, Destroyman III. I'll be giving you helpful tips and tricks!"
+    document.getElementById('buttonToSpeak').style.backgroundColor = 'rgb(119, 112, 100)'
+    document.getElementById('buttonToSpeak').style.cursor = 'default'
+    setTimeout(function() {
+        isOnCooldown = false
+        document.querySelector('.speechBubble').style.display = 'none'
+        document.getElementById('buttonToSpeak').style.backgroundColor = 'papayawhip'
+        document.getElementById('buttonToSpeak').style.cursor = 'pointer'
+    }, 5000)
+}, 3800)
+
+function playSound(soundFile) {
+    if (siteStartUp === false && isOnCooldown === false){
+            let audio = new Audio(soundFile)
+            audio.play()
+            isOnCooldown = true;
         setTimeout(function() {
             isOnCooldown = false;
-        }, 3000);
+        }, 5000);
     }
 }
 
