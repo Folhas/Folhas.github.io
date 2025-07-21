@@ -16,7 +16,7 @@ function speak() {
     const dialogue = [
         'ACHOO! Ah, sorry. Coral Fever? No no, just my spring allergies acting up.',
 'AD BREAK: Corporations have no soul.',
-'AD BREAK: I am brought to you by [WEBZONE]!', 'Buy [PRODUCT] now using code "DESTROYMAN45" to get 45% off your next purchase of [ITEM]!',
+'AD BREAK: I am brought to you by [WEBZONE]! Buy [PRODUCT] now using code "DESTROYMAN45" to get 45% off your next purchase of [ITEM]!',
 'AD BREAK: Stream Naktigonis. Please. You know you want to.',
 'AD BREAK: selling cbow 2k',
 'Cheh tahh sehh kee gah... Pess kahh tahh... Hm? Oh, sorry, I was just singing the menu theme.',
